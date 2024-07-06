@@ -122,8 +122,15 @@
                         nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
                         faucibus at, tincidunt eget, porttitor non, dolor. 
                         </p>
-                        <iframe width="100%" height="584" frameborder="0"
-                        src="https://observablehq.com/embed/@krunal/shakespeare-plays-by-gender-genre@112?cells=chart"></iframe>
+                        <div id="observablehq-chart-421f4cec"></div>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+                        <script type="module">
+                        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                        import define from "https://api.observablehq.com/@krunal/shakespeare-plays-by-gender-genre@115.js?v=4";
+                        new Runtime().module(define, name => {
+                          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-421f4cec"));
+                        });
+                        </script>
                         <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</small></p>
                         <p>
                         Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
