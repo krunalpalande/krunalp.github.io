@@ -2,11 +2,13 @@
 
 DESCRIPTION:
 
-MONICA is a carefully crafted and modern HTML website template designed for freelancers, social 
-media managers, and marketing consultants who help businesses and companies improve their online 
-presence and establish long-lasting relationships with their communities. It is an excellent tool 
-for telling people about your skills and credentials, services, and other offerings, giving them 
-a better idea of who you are.
+LUTHER is a modern, stylish, free personal website template designed for creative individuals 
+and professionals. It is the perfect template if you wish to build an online presence and create 
+a strong first impression on all your site visitors. Luther will help you craft a personal 
+professional website wherein you can showcase your works, talents, and present yourself on the 
+web in the best possible light. On top of that, the template is versatile and easy to customize 
+so with some modifications and a bit of creativity you even use it as a portfolio site for 
+digital studios or a landing page for your projects.
 
 ==================================================================================================
 
@@ -70,7 +72,7 @@ Also, keep your Paypal receipt as proof of payment and your good to go.
 
 SUPPORT:
     
-Since MONICA is distributed for free, support is not offered. MONICA is coded according 
+Since LUTHER is distributed for free, support is not offered. LUTHER is coded according 
 to current web standards and we did our best to make the template easy to use and modify.
 If you have minimum web development experience, you can easily modify the template. 
 However, If you're still new to HTML and CSS, I suggest that you visit the 
@@ -90,29 +92,6 @@ javascript in your skill-set, you can also check out these tutorials:
 ------------------------------------------------------------------------------------------------------ 
 
 
-USING THE MAILCHIMP FORM:
-
-To use the mailchimp form you need a mailchimp url. To get the mailchimp url, login to 
-your mailchimp account, click the Audience menu and select signup forms. Then choose 
-embedded forms and select unstyled form. In the generated form code get the value of 
-the form ACTION attribute and use it as your mailchimp url. Open the main.js file located
-in the template's "js" folder and look for this line of code: 
-
-const cfg = {
-
-    // MailChimp URL
-    mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
-
-};
-
-
-Replace the value of mailChimpURL with your mailchimp url.
-
-
-
--------------------------------------------------------------------------------------------------------
-
-
 GET THE LATEST VERSION:
 
 We update our templates on a regular basis so to make sure that you have the latest version, 
@@ -128,24 +107,26 @@ SOURCES AND CREDITS:
 I've used the following resources as listed.
 
 Fonts:
- - DM Serif Display Font (https://fonts.google.com/specimen/DM+Serif+Display)
- - Roboto Flex Font (https://fonts.google.com/specimen/Roboto+Flex)
+ - Public Sans Font (https://fonts.google.com/specimen/Public+Sans)
+ - DM Serif Display (https://fonts.google.com/specimen/DM+Serif+Display)
 
 Icons:
- - Boxicons (https://boxicons.com/)
- - Atomicons (https://atomicons.com/)
+ - Iconmonstr (https://iconmonstr.com/)
 
 Stock Photos and Graphics:
  - Unsplash.com (https://unsplash.com/)
  
 Javascript Files:
+ - Anime.js (https://animejs.com/)
+ - Swiper (https://swiperjs.com/)
  - MoveTo.js (https://github.com/hsnaydd/moveTo)
  - Prism.js (https://prismjs.com/)
- - Swiper JS (https://swiperjs.com/)
+ - Basic Lightbox (https://basiclightbox.electerious.com/)
+ - MailtoUI (https://mailtoui.com/)
 
 -------------------------------------------------------------------------------------------------------
 
 
-Thanks for downloading from StyleShout :)
+Thanks for downloading from Styleshout :)
 
 
