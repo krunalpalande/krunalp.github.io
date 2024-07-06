@@ -122,8 +122,15 @@
                         nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
                         faucibus at, tincidunt eget, porttitor non, dolor. 
                         </p>
-                        <iframe width="100%" height="384" frameborder="0"
-                        src="https://observablehq.com/embed/011caebd28247159@1062?cells=chart"></iframe>
+                        <div id="observablehq-chart-e9f4b268"></div>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+                        <script type="module">
+                        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                        import define from "https://api.observablehq.com/d/011caebd28247159@1062.js?v=4";
+                        new Runtime().module(define, name => {
+                          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e9f4b268"));
+                        });
+                        </script>
                         <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</small></p>
                         <blockquote>
                             <p>There is a God-shaped vacuum in the heart of each man which cannot be satisfied 
