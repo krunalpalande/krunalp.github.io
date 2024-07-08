@@ -1848,7 +1848,7 @@ select {
     padding             : var(--input-vpadding) 0 calc(var(--input-vpadding) - 1px);
     border              : 0;
     outline             : 0;
-    color               : var(--color-text-light);
+    color               : var(--color-text);
     font-family         : var(--font-1);
     font-size           : calc(var(--text-size) * 0.7778);
     line-height         : var(--input-line-height);
