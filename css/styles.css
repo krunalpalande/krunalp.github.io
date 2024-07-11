@@ -1936,6 +1936,7 @@ input[type="radio"] {
 
 label>.label-text {
     display     : inline-block;
+    font-weight   : 10;
     margin-left : 1rem;
     font-family : var(--font-1);
     line-height : inherit;
