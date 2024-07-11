@@ -118,13 +118,16 @@
                         </script>
                         <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</small></p>
                         <p>Shakespeare's women were conventional in histories. In tragedies, a little less. In comedies though, they were adventurous.  They not only spoke more but with spiritedness. For instance, in "As You Like It", women speak for 40% of the play's duration, and Rosalind dominates much of the action. It is not surprising then, that among the top ten plays where women speak more, eight are comedies. [I am not getting into the problem of problem plays]. Among the other two, one is a history and the other a tragedy. "Henry VI, Part II" features there because Margaret of Anjou plays a pivotal role in shaping the plot. And "Romeo and Juliet" is one of the few plays where a woman is an eponymous character.</p>
-                        <div id="observablehq-chart-d5222ff9"></div>
+                         <div id="observablehq-viewof-category-c2fce8dd"></div>
+                        <div id="observablehq-chart-c2fce8dd"></div>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                         <script type="module">
                         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                        import define from "https://api.observablehq.com/@krunal/shakespeare-plays-by-gender-genre@161.js?v=4";
+                        import define from "https://api.observablehq.com/d/ff533609038c15a2@1011.js?v=4";
                         new Runtime().module(define, name => {
-                          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d5222ff9"));
+                          if (name === "viewof category") return new Inspector(document.querySelector("#observablehq-viewof-category-c2fce8dd"));
+                          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-c2fce8dd"));
+                          return ["filteredData"].includes(name);
                         });
                         </script>
                         <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</small></p>
@@ -146,18 +149,7 @@
                         Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
                         nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
                         faucibus at, tincidunt eget, porttitor non, dolor. 
-                        <div id="observablehq-viewof-category-c2fce8dd"></div>
-                        <div id="observablehq-chart-c2fce8dd"></div>
-                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-                        <script type="module">
-                        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                        import define from "https://api.observablehq.com/d/ff533609038c15a2@1011.js?v=4";
-                        new Runtime().module(define, name => {
-                          if (name === "viewof category") return new Inspector(document.querySelector("#observablehq-viewof-category-c2fce8dd"));
-                          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-c2fce8dd"));
-                          return ["filteredData"].includes(name);
-                        });
-                        </script>
+                       
                         <p>
                         Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
                         nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
