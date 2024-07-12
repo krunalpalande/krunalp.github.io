@@ -1921,7 +1921,7 @@ select:focus {
 label,
 legend {
     font-family   : var(--font-1);
-    font-weight   : 600;
+    font-weight   : 10;
     font-size     : var(--text-sm);
     line-height   : var(--vspace-0_5);
     margin-bottom : var(--vspace-0_5);
