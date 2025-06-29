@@ -2,9 +2,9 @@
 
 DESCRIPTION:
 
-MAILLARD is a free restaurant HTML website template that is perfect for any modern restaurant, 
-cafe, or patisserie. It is simple, elegant, and easy to use. It includes all the essential pages 
-you need for a restaurant website, and it is fully responsive and highly customizable.
+LOUNGE is a free, responsive HTML template built for cafes, offering a clean one-page design with
+core features such as a menu, gallery, and subscription form. It works just as well for 
+restaurants and helps you launch a great-looking site with ease.
 
 ==================================================================================================
 
@@ -68,7 +68,7 @@ Also, keep your Paypal receipt as proof of payment and your good to go.
 
 SUPPORT:
     
-Since MAILLARD is distributed for free, support is not offered. MAILLARD is coded according 
+Since LOUNGE is distributed for free, support is not offered. LOUNGE is coded according 
 to current web standards and we did our best to make the template easy to use and modify.
 If you have minimum web development experience, you can easily modify the template. 
 However, If you're still new to HTML and CSS, I suggest that you visit the 
@@ -82,6 +82,29 @@ javascript in your skill-set, you can also check out these tutorials:
 
  - https://www.codecademy.com/learn/introduction-to-javascript
  - https://javascript.info/
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+USING THE MAILCHIMP FORM:
+
+To use the mailchimp form you need a mailchimp url. To get the mailchimp url, login to 
+your mailchimp account, click the Audience menu and select signup forms. Then choose 
+embedded forms and select unstyled form. In the generated form code get the value of 
+the form ACTION attribute and use it as your mailchimp url. Open the main.js file located
+in the template's "js" folder and look for this line of code: 
+
+const cfg = {
+
+    // MailChimp URL
+    mailChimpURL : 'https://gmail.us8.list-manage.com/subscribe/post?u=0372f416821b8680ad7ce7df2&amp;id=d94694ee65&amp;f_id=001f16e1f0'
+
+};
+
+
+Replace the value of mailChimpURL with your mailchimp url.
 
 
 
@@ -104,10 +127,8 @@ SOURCES AND CREDITS:
 I've used the following resources as listed.
 
 Fonts:
- - Cormorant Garamond Font (https://fonts.google.com/specimen/Cormorant+Garamond)
- - Newsreader Font (https://fonts.google.com/specimen/Newsreader)
- - Inter Font (https://fonts.google.com/specimen/Inter)
- - Cormorant SC Font (https://fonts.google.com/specimen/Cormorant+SC)
+ - Playfair Display Font (https://fonts.google.com/specimen/Playfair+Display)
+ - Roboto Flex Font (https://fonts.google.com/specimen/Roboto+Flex)
 
 Icons:
  - Boxicons (https://boxicons.com/)
@@ -118,7 +139,6 @@ Stock Photos and Graphics:
  - Pexels.com (https://www.pexels.com/)
  
 Javascript Files:
- - MoveTo.js (https://github.com/hsnaydd/moveTo)
  - Prism.js (https://prismjs.com/)
  - Swiper JS (https://swiperjs.com/)
  - GLightbox (https://biati-digital.github.io/glightbox/)
