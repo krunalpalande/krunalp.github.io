@@ -185,8 +185,8 @@
 
   /* background,surface and border colors
    */
-    --color-bg                    : var(--color-neutral-950);
-    --color-bg-inverse            : var(--color-neutral-600);
+    --color-bg                    : var(--color-neutral-50);
+    --color-bg-inverse            : var(--color-neutral-950);
 
     --color-bg-primary            : var(--color-1-600);
     --color-bg-primary-light      : var(--color-1-500);
@@ -208,15 +208,15 @@
 
   /* text
    */
-    --color-text                  : var(--color-neutral-200);
-    --color-text-bold             : var(--color-neutral-50);
-    --color-text-light            : var(--color-neutral-500);
-    --color-headings              : var(--color-neutral-100);
-    --color-placeholder           : var(--color-neutral-500);
+    --color-text                  : var(--color-neutral-900);
+    --color-text-bold             : var(--color-neutral-850);
+    --color-text-light            : var(--color-neutral-700);
+    --color-headings              : var(--color-neutral-850);
+    --color-placeholder           : var(--color-neutral-750);
 
   /* link
    */
-    --color-link                  : var(--color-1-500);
+    --color-link                  : var(--color-neutral-700);
     --color-link-hover            : var(--color-bg-secondary);
     --color-link-active           : var(--color-bg-secondary);
 
@@ -240,7 +240,7 @@
   /* preloader
    */
     --color-preloader-bg          : var(--color-bg);
-    --color-loader                : var(--color-neutral-400);
+    --color-loader                : var(--color-neutral-700);
     --color-loader-light          : var(--color-white);
 }
 
@@ -2660,7 +2660,7 @@ td:last-child {
 .pgn__prev:hover,
 .pgn__next:focus,
 .pgn__next:hover {
-    background: var(--color-border);
+    background: var(--color-bg-primary);
 }
 
 .pgn__prev svg,
@@ -3094,7 +3094,7 @@ td:last-child {
 }
 
 .swiper-container .swiper-pagination-bullet-active {
-    background: var(--color-white);
+    background: var(--color-neutral-700);
     opacity   : 1;
 }
 
@@ -3327,7 +3327,7 @@ td:last-child {
 }
 
 .header-nav__links .current a {
-    color: var(--color-white);
+    color: var(--color-neutral-600);
 }
 
 /* header contact num
@@ -3377,7 +3377,7 @@ td:last-child {
 
 .header-menu-toggle span {
     display         : block;
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-700);
     width           : var(--toggle-line-width);
     height          : var(--toggle-line-height);
     margin-top      : -1px;
@@ -3420,7 +3420,7 @@ td:last-child {
 
 .header-menu-toggle.is-clicked span::before,
 .header-menu-toggle.is-clicked span::after {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-700);
 }
 
 .header-menu-toggle.is-clicked span::before {
@@ -3691,6 +3691,8 @@ td:last-child {
     letter-spacing: 0.15em;
     color         : var(--color-text-light);
 }
+
+
 
 /* --------------------------------------------------------------------
  * ## intro scroll down
@@ -4180,7 +4182,7 @@ td:last-child {
 
 .tab-nav__list a:hover,
 .tab-nav__list a:focus {
-    background-color: var(--color-neutral-900);
+    background-color: var(--color-neutral-100);
     color           : var(--color-text);
 }
 
@@ -4263,7 +4265,7 @@ td:last-child {
 }
 
 .menu-list__item:nth-child(odd) {
-    background-color: var(--color-bg-neutral-dark);
+    background-color: var(--color-neutral-100);
 }
 
 .menu-list__item h4 {
@@ -4554,7 +4556,7 @@ td:last-child {
 }
 
 .testimonials-slider__avatar {
-    background-color: var(--color-bg-neutral);
+    background-color: var(--color-neutral-50);
     width           : var(--vspace-2);
     height          : var(--vspace-2);
     padding         : var(--vspace-0_25);
@@ -4884,7 +4886,7 @@ td:last-child {
     height         : var(--vspace-1_75);
     width          : var(--vspace-1_75);
     border-radius  : 50%;
-    border         : 1px solid var(--color-white);
+    border         : 1px solid var(--color-bg-primary);
     margin-right   : var(--vspace-0_75);
     position       : relative;
 }
@@ -4895,7 +4897,7 @@ td:last-child {
 }
 
 .ss-go-top svg path {
-    fill: var(--color-white);
+    fill: var(--color-bg-primary);
 }
 
 /* ------------------------------------------------------------------- 
