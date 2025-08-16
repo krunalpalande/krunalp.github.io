@@ -91,15 +91,46 @@
 /* ------------------------------------------------------------------- 
  * ## font families
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap");
+
+/* Switzer Variable Font - Normal */
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Variable.woff2') format('woff2'),
+       url('fonts/Switzer-Variable.woff') format('woff'),
+       url('fonts/Switzer-Variable.ttf') format('truetype');
+  font-weight: 100 900; /* full variable range */
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Switzer Variable Font - Italic */
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-VariableItalic.woff2') format('woff2'),
+       url('fonts/Switzer-VariableItalic.woff') format('woff'),
+       url('fonts/Switzer-VariableItalic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Concourse Index';
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap; /* 'swap' is better than 'auto' for performance */
+  src: url('fonts/concourse_index_regular.woff2') format('woff2');
+}
 
 :root {    
-   /* font-families
-   */
-    --font-1   : "Roboto Flex", Sans-Serif;
-    --font-2   : "Playfair Display", Serif;
+    /* font-families */
+    --font-1   : "Switzer", sans-serif;
+    --font-2   : "Switzer", sans-serif;
+    --font-3   : "Concourse Index", serif;
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
+
 
 /* ------------------------------------------------------------------- 
  * ## colors
@@ -185,7 +216,7 @@
 
   /* background,surface and border colors
    */
-    --color-bg                    : var(--color-neutral-50);
+    --color-bg                    : var(--color-pure-white);
     --color-bg-inverse            : var(--color-neutral-950);
 
     --color-bg-primary            : var(--color-1-600);
@@ -210,7 +241,7 @@
    */
     --color-text                  : var(--color-neutral-900);
     --color-text-bold             : var(--color-neutral-850);
-    --color-text-light            : var(--color-neutral-700);
+    --color-text-light            : var(--color-neutral-800);
     --color-headings              : var(--color-neutral-850);
     --color-placeholder           : var(--color-neutral-750);
 
@@ -1856,6 +1887,15 @@ hr.fancy::before {
 /* --------------------------------------------------------------------
  * ## lists
  * -------------------------------------------------------------------- */
+ol ::marker {
+  font-family: var(--font-3);
+  font-variant-numeric: tabular-nums;
+}
+
+ol li {
+  font-family: var(--font-2); /* Switzer text */
+}
+
 ol {
     list-style: decimal;
 }
@@ -3242,9 +3282,8 @@ td:last-child {
 
     opacity         : 0;
     visibility      : hidden;
-    background-color: var(--color-bg);
-    box-shadow      : var(--shadow-medium);
-    border-bottom   : 1px solid var(--color-bg-neutral-dark);
+    background-color: transparent;
+    border-bottom   : 0px solid var(--color-bg-neutral-dark);
     position        : fixed;
     top             : 0;
     left            : 0;
@@ -3260,7 +3299,7 @@ td:last-child {
     align-items     : center;
     justify-content : center;
     height          : var(--header-height);
-    background-color: var(--color-bg);
+    background-color: transparent;
     padding         : 0 calc(var(--gutter) * 2);
     position        : relative;
 }
@@ -3303,12 +3342,16 @@ td:last-child {
     list-style: none;
     display   : inline-flex;
     flex-flow : row nowrap;
-    margin    : 0;
-    padding   : 0 var(--vspace-1_25);
+    margin: 0;
+    padding: 0;
+    position: absolute;   /* position them absolutely in the header */
+    right: var(--vspace-1_25); /* where the contact button was aligned */
+    top: 50%;             /* vertically center */
+    transform: translateY(-50%);
 }
 
 .header-nav__links li {
-    padding-left: 0;
+  margin-left: var(--vspace-0_5);
 }
 
 .header-nav__links a {
@@ -3333,30 +3376,7 @@ td:last-child {
 /* header contact num
  */
 .header-contact {
-    transform: translate(0, calc(-50% + 0.2rem));
-    position : absolute;
-    right    : calc(var(--gutter) * 2);
-    top      : 50%;
-}
-
-.header-contact__num {
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    gap            : var(--vspace-0_25);
-}
-
-.header-contact__num svg {
-    height: var(--vspace-0_5);
-    width : var(--vspace-0_5);
-}
-
-.header-contact__num svg path {
-    stroke: var(--color-text);
-}
-
-.header-contact .btn {
-    margin: 0 0 var(--vspace-0_125) 0;
+  display: none;
 }
 
 /* --------------------------------------------------------------------
@@ -4254,6 +4274,7 @@ td:last-child {
 .menu-list {
     list-style : none;
     margin-left: 0;
+
 }
 
 .menu-list__item {
@@ -4265,7 +4286,7 @@ td:last-child {
 }
 
 .menu-list__item:nth-child(odd) {
-    background-color: var(--color-neutral-100);
+    background-color: var(--color-neutral-50);
 }
 
 .menu-list__item h4 {
@@ -4280,6 +4301,7 @@ td:last-child {
     line-height  : var(--vspace-0_75);
     margin-bottom: var(--vspace-1);
     color        : var(--color-text-light);
+
 }
 
 .menu-list__item-desc {
