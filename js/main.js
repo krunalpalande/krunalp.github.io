@@ -699,3 +699,37 @@
     })();
 
 })(document.documentElement);
+
+/* accordion
+ * ---------------------------------------------------- */
+const ssAccordion = function() {
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const openHeader = document.querySelector(".accordion-header.active");
+
+            // Close if another is open
+            if (openHeader && openHeader !== header) {
+                openHeader.classList.remove("active");
+                openHeader.nextElementSibling.style.maxHeight = 0;
+                openHeader.nextElementSibling.classList.remove("open");
+            }
+
+            // Toggle clicked
+            header.classList.toggle("active");
+            const content = header.nextElementSibling;
+
+            if (header.classList.contains("active")) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add("open");
+            } else {
+                content.style.maxHeight = 0;
+                content.classList.remove("open");
+            }
+        });
+    });
+};
+
+// run accordion
+ssAccordion();
