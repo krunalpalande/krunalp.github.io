@@ -2313,7 +2313,7 @@ select {
 }
 
 textarea {
-    min-height: var(--vspace-8);
+    min-height: var(--vspace-4);
 }
 
 input[type=email]:focus,
@@ -2582,7 +2582,7 @@ th,
 td {
     padding      : var(--vspace-0_5) var(--vspace-1) calc(var(--vspace-0_5) - 1px);
     text-align   : left;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-neutral-200);
 }
 
 th {
@@ -2606,6 +2606,14 @@ td:last-child {
 .table-responsive {
     overflow-x                : auto;
     -webkit-overflow-scrolling: touch;
+}
+
+tbody tr:hover {
+  background: var(--color-neutral-50);
+}
+
+tr[data-href]:hover {
+  background: var(--color-neutral-50);
 }
 
 

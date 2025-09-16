@@ -733,3 +733,18 @@ const ssAccordion = function() {
 
 // run accordion
 ssAccordion();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll("tr[data-href]");
+  
+  rows.forEach(row => {
+    row.addEventListener("click", () => {
+      window.location = row.dataset.href;
+    });
+
+    // Change cursor on hover
+    row.style.cursor = "pointer";
+  });
+});
+
