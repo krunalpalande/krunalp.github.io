@@ -129,6 +129,13 @@
     --font-2   : "Switzer", sans-serif;
     --font-3   : "Concourse Index", serif;
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+
+--type-body: var(--font-3); /* 👈 this makes body use Concourse Index */
+  --type-size-body: 16px;
+  --type-weight-body: normal;
+  --type-line-height-body: 1.6;
+  --color-text: #222;
+
 }
 
 
