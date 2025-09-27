@@ -114,27 +114,13 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Concourse Index';
-  font-style: normal;
-  font-weight: normal;
-  font-stretch: normal;
-  font-display: swap; /* 'swap' is better than 'auto' for performance */
-  src: url('fonts/concourse_index_regular.woff2') format('woff2');
-}
-
 :root {    
     /* font-families */
     --font-1   : "Switzer", sans-serif;
     --font-2   : "Switzer", sans-serif;
-    --font-3   : "Concourse Index", serif;
+    --font-3   : "Switzer", sans-serif;
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 
---type-body: var(--font-3); /* 👈 this makes body use Concourse Index */
-  --type-size-body: 16px;
-  --type-weight-body: normal;
-  --type-line-height-body: 1.6;
-  --color-text: #222;
 
 }
 
