@@ -99,7 +99,7 @@
             <div class="row s-pageheader row-x-center">
                 <div class="column xl-12">
                     <h1>                        
-                     Information Design
+                     Matheran
                     </h1>
                </div>
             </div> <!-- end s-pageheader -->
@@ -142,13 +142,46 @@
 
 <h6>Enrol</h6>
 <p>Our design courses run as live Zoom sessions at regular intervals.</p>
-<p>Drop us an email with subject "<b>Information Design:[Your Name]</b>" to <u>info[at]nookstudio[dot]in</u> to reserve your spot for the next session. We’ll send you the details once your registration is confirmed.</p>
+<p>Fill in the form below to reserve your spot for the next session.<br>We’ll send you the details by email once your registration is confirmed.</p>
 <p></p>
 <p></p>
 
 
  <div class="row">
         
+                    <div class="column xl-8 md-12">
+
+<form action="https://formspree.io/f/mldwkbgr" method="POST">
+    <div>
+        <label for="sampleInput">email</label>
+        <input class="u-fullwidth" type="email" name="email" placeholder="test@mailbox.com" id="sampleInput" required>
+    </div>
+
+    <div>
+        <label for="sampleRecipientInput">Course Name</label>
+        <div class="ss-custom-select">
+            <select class="u-fullwidth" name="reason" id="sampleRecipientInput" required>
+                <option value="Questions">Information Design</option>
+                <option value="Report">Interaction Design</option>
+                <option value="Colour">Colour</option>
+		<option value="Typography">Typography</option>
+            </select>
+        </div>
+    </div>
+    
+    <label for="exampleMessage">Message</label>
+    <textarea class="u-fullwidth" name="message" placeholder="your message" id="exampleMessage" required></textarea>
+
+    <label class="u-add-bottom">
+        <input type="checkbox" name="copy">
+        <span class="label-text">Send a copy to yourself</span>
+    </label>
+
+<input type="hidden" name="g-recaptcha-response">
+
+    <input class="btn--ghost" type="submit" value="Submit">
+</form>
+    </div>
 
 
 
