@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volvelles</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .s-pageheader {
+            padding-top: var(--vspace-3);
+        }
+        .s-pagecontent {
+            /* padding-bottom: var(--vspace-4); */
+        }
+    </style>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+
+<body id="top">
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>   
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+        
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="container s-header__content">
+                
+                <div class="s-header__block">
+                    <div class="header-logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+            
+ <nav class="header-nav">    
+                    <ul class="header-nav__links">
+                        <li class="current"><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="learn.html">learn</a></li>
+                        <li><a href="folio.html">experiments</a></li>
+                        <li><a href="books.html">read</a></li>
+                    </ul> <!-- end header-nav__links -->  
+
+                               
+                       <div class="header-contact">
+                        <a href="mailto:info@nooks.com" class="header-contact__num btn">
+                            Contact Us
+                        </a>
+                    </div> <!-- end header-contact -->
+                </nav> <!-- end header-nav -->         
+            
+            </div> <!-- end s-header__content -->
+
+        </header> <!-- end s-header -->
+
+        
+        <!-- # main content
+        ================================================== -->
+        <article class="s-content container">
+            <!-- ## pageheader -->
+            <div class="row s-pageheader row-x-center">
+                <div class="column xl-12">
+                    <h1>                        
+                     Volvelles
+                    </h1>
+               </div>
+            </div> <!-- end s-pageheader -->
+            
+            <!-- ## pagecontent -->
+            <section class="s-pagecontent">                
+        
+                <div class="row">
+        
+                    <div class="column xl-12 md-12">
+        
+<p>The word volvelle comes from the Latin volvere, meaning “to turn.” Volvelles were paper instruments made from layered discs fixed with a rivet. They were bound into books or mounted as loose sheets and appeared widely in astronomical, medical, and calendrical texts across Europe from the late medieval period through the early modern era.
+
+Volvelles expressed an important idea: knowledge could be operated, not only read. Much like later calculators and computers, they were simple analogue machines made from paper. Information lived on the edges of discs, along radii and arcs, and was revealed or concealed through rotation. Understanding emerged through alignment and movement.</p>
+
+<hr>
+
+<h4>Lunar Volvelle</h4>
+
+<p>The lunar volvelle allowed a reader to track the movements of the Sun and Moon and to understand their changing relationship across the year. Clockwise and anticlockwise motion reflect how celestial bodies appear to move through the sky. Through a small circular window, the reader can watch the visible shape of the Moon change as the discs turn.
+</p>
+
+    <figure class="volvelle-figure">
+      <div class="volvelle-square">
+        <canvas class="volvelle-canvas" data-volvelle="lunar"></canvas>
+      </div>
+      <figcaption>
+        This is an interactive instrument. Drag the rings to turn the calendar, Sun, and Moon.
+      </figcaption>
+    </figure>
+      
+<h6>Operating the Interactive Lunar Volvelle</h6>
+
+<p>The digital lunar volvelle responds to simple circular gestures. Each disc can be rotated by holding near the part of the instrument it represents.</p>
+<ol>
+    <li>Moon disc: hold near the centre of the volvelle and turn to rotate the Moon Disc.</li>
+    <li>Sun disc: hold near the Sun pointer and turn to rotate the Sun Disc.</li>
+    <li>Calendar disc: hold near the dates/months on the outer ring and turn to rotate the calendar.</li>
+</ol>
+
+<p>Each disc turns smoothly around the centre. By rotating and re-aligning them, the changing relationships between calendar, Sun, and Moon become visible.</p>
+
+
+
+<hr>
+
+<h4>Moon Phase Volvelle</h4>
+
+<p>This volvelle is based on a student project developed as a printable, physical instrument by NASA JPL, California Institute of Technology. A paper tool that could be cut, assembled, and turned by hand. The version presented here is a redesigned digital simulation of that same idea. While the materials have changed, the underlying logic remains the same: understanding the Moon’s phases through alignment, rotation, and observation. The volvelle connects three ideas on a single circular surface: the calendar date, the Moon’s phase, and where to look in the sky.</p>
+
+    <figure class="volvelle-figure">
+      <div class="volvelle-square">
+        <canvas class="volvelle-canvas" data-volvelle="nasa-moon-phase"></canvas>
+      </div>
+      <figcaption>
+        This is an interactive instrument. Drag the rings to turn the Calendar, Moon Phase, and Position.
+      </figcaption>
+    </figure>
+      
+<h6>Operating the Interactive Moon Phase Volvelle</h6>
+
+<p>The digital moon phase volvelle responds to simple circular gestures. Each disc can be rotated by holding near the part of the instrument it represents.</p>
+<ol>
+    <li>Moon Phase disc: hold near the Moon pointer and turn to rotate.</li>
+    <li>Calendar disc: hold near the dates/months on the outer ring and turn to rotate the calendar.</li>
+</ol>
+
+<p>Each disc turns smoothly around the centre. By rotating and re-aligning them, the instrument makes visible how the Moon’s appearance, its position, and the time of day relate to one another.</p>
+
+<hr>
+
+<h6>A System of Cycles</h6>
+<p>The lunar volvelle works through cycles that span the year.</p>
+
+<ol>
+    <li>The solar disc marks the annual motion of the Sun.</li>
+    <li>The lunar disc tracks the monthly cycle of the Moon.</li>
+    <li>The calendar and zodiac rings provide a shared reference frame.</li>
+</ol>
+<p>These elements work together as a system. Meaning appears through their relative positions rather than from any single disc in isolation.</p>
+
+<h6>The Base Disc: Orientation and Reference</h6>
+<p>The base disc forms the ground of the instrument. It establishes visual stability and anchors the rotating layers. Directions are placed here to provide orientation and to give the reader a fixed point of reference while interacting with the volvelle. Design-wise, the base disc is understated. Its role is structural. It supports motion above it and grounds the entire instrument in a shared sense of direction.</p>
+
+<h6>The Calendar and Zodiac Disc</h6>
+<p>Above the base sits the calendar disc. This disc represents the solar year as a continuous cycle rather than a sequence of pages. It contains several nested scales:</p>
+<ol>
+    <li>The outer scale shows the year divided into months and days</li>
+    <li>The zodiac scale, just inside, divides the Sun’s annual path into twelve sections.</li>
+    <li>Inside the zodiac ring is a scale used to estimate the length of the day, cross marks indicate the solstices, and short lines mark one-hour intervals.</li>
+<li>Each hour mark supports two readings: one side shows time from noon to sunset & the other shows time from sunset to midnight</li>
+<li>Small dots between the hour marks allow finer readings: one dot adds 15 minutes, two dots add 30 minutes, and two dots add 30 minutes.</li>
+<li>Inside the day length scale is another scale aligned to the solstices and equinoxes. This scale shows how high the Sun stands in the sky at local noon on any given day.</li>
+</ol>
+<p>Note: The Noon Sun Altitude scale shows values from 15 to 60 degrees, reflecting conditions at mid-northern latitudes such as Europe, the Mediterranean, and parts of Asia. At these latitudes, the Sun’s noon height stays within this range across the year.</p>
+
+<h6>The Sun Disc</h6>
+<p>The Sun disc sits above the calendar and zodiac rings. A long pointer extends across these scales to indicate the Sun’s position for a given date.</p>
+
+<p>Additional smaller pointers mark key angular positions relative to the Sun, such as points opposite or at right angles to it. By aligning the Sun pointer with a date, the Sun’s position in the zodiac becomes immediately visible. Reversing the process allows dates to be read from zodiac positions.</p>
+
+<p>The Sun disc establishes the primary rhythm of the instrument: the annual cycle.</p>
+
+<h6>The Moon Disc</h6>
+<p>The final component is the Moon disc. It sits above the Sun disc and rotates to show the Moon’s position.</p>
+<p>Like the Sun disc, it carries a long pointer that crosses:</p>
+<ol>
+    <li>the lunar age scale on the Sun disc</li>
+    <li>the zodiac calendar beneath</li>
+</ol>
+<p>Several smaller pointers mark important angular relationships between the Moon and the rest of the circle. These divide the orbit into familiar fractions:</p>
+<ol>
+    <li>Asterisk: 60° (one-sixth of the ecliptic)</li>
+    <li>Square: 90° (one-quarter of the ecliptic)</li>
+    <li>Triangle: 120° (one-third of the ecliptic)</li>
+<li>Linked circles: 180° (half of the ecliptic)</li>
+</ol>
+
+<p>Together, these markers show how the Moon stands in relation to the Sun and other key positions as it moves through its cycle.</p>
+<p>At the centre of the Moon disc is a circular window. This opening reveals an approximate image of the Moon’s current phase, determined by its position relative to the Sun. As the disc turns, the visible phase changes, linking motion directly to appearance.</p>
+
+
+<hr>
+<h5>How to use the Lunar Volvelle</h5>
+
+<h6>#1: Relating the Sun and Moon</h6>
+<p>One of the most important uses of a lunar volvelle is to show how the Sun and Moon relate to each other on a given day.</p>
+
+<p>Locate the Sun:</p>
+<ol>
+    <li>align the Sun pointer with a date on the calendar</li>
+    <li>read the corresponding zodiac position from the adjacent scale</li>
+</ol>
+<p>Locate the Moon, the Moon’s position can be estimated in several ways, depending on the information available</p>
+<ol>
+    <li>Using tables or calendars that list the Moon’s position</li>
+    <li>Counting days since the last full moon and setting the lunar age scale</li>
+    <li>Matching the visible lunar phase using the phase window</li>
+</ol>
+
+<p>New maps will continue to join the series. Over time, the aim is to build a coherent Atlas of Sahyadri walking routes, one trail at a time.</p>
+
+<h6>#2: Estimating the Length of Day and Night</h6>
+<p>Before electric lighting, knowing how much daylight was available mattered for travel, work, and planning. While almanacs listed such information, a volvelle offered a quicker, visual alternative.</p>
+<p>By aligning the Sun disc with a date:</p>
+<ol>
+    <li>the day-length scale shows how many hours of daylight occur on one side of the day</li>
+    <li>doubling that value gives the full length of daylight</li>
+</ol>
+
+<p>For example, in mid-April the scale shows just under seven hours of daylight after noon, giving roughly thirteen and a half hours of daylight in total. The remaining hours belong to the night. This reading focuses on daylight itself rather than twilight.</p>
+
+<h6>#3: Estimating the Sun’s Height in the Sky</h6>
+<p>The Sun reaches different heights above the horizon across the year. In summer it climbs high, casting short shadows. In winter it remains lower, and shadows lengthen.</p>
+
+<p>The volvelle allows this change to be read visually. Aligning the Sun pointer with a date causes it to cross the altitude scale, revealing the Sun’s maximum height at noon for that day.</p>
+
+<p>For example, locating the 45-degree mark on the scale and checking where it aligns with the calendar shows that the Sun reaches this height between early April and early September. Within this range, the Sun climbs even higher, peaking at the summer solstice.</p>
+
+<p>Rather than calculating angles, the volvelle turns seasonal change into a pattern that can be read at a glance.</p>
+
+<hr>
+ <div class="row">
+        
+
+
+
+                    </div>
+        
+                </div> <!-- end row -->
+
+        
+                <hr>
+
+            </section> <!-- pagecontent --> 
+
+        </article> <!-- end main content -->
+
+        
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="container s-footer">  
+            
+            
+            <div class="row s-footer__bottom">       
+                
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© 2025 Nook Studio</span> 
+                       </p>
+                </div>
+
+            </div> <!-- end s-footer__bottom -->          
+
+            
+            
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
