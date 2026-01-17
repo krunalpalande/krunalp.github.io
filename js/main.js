@@ -956,14 +956,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (r < c * 0.55)                 return layers[3]; // sun
       }
 
-      if (type === "nasa-moon-phase") {
-        const step = c / layers.length;
-        const index = Math.min(
-          layers.length - 1,
-          Math.floor(r / step)
-        );
-        return layers[layers.length - 1 - index];
-      }
+if (type === "nasa-moon-phase") {
+  if (r > c * 0.60 && r < c * 0.95) return layers[0]; // earth
+  if (r > c * 0.30 && r < c * 0.60) return layers[1]; // moon
+  return null;
+}
 
       return null;
     }
