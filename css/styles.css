@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
 /* =================================================================== 
- * Lounge Main Stylesheet
- * Template Ver. 1.0.0
- * 05-03-2025
+ * 17-03-2025
  * ------------------------------------------------------------------
  *
  * TOC:
@@ -118,38 +116,10 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Zodiak-Variable';
-  src: url('../fonts/Zodiak-Variable.woff2') format('woff2'),
-       url('../fonts/Zodiak-Variable.woff') format('woff'),
-       url('../fonts/Zodiak-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
-/**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 900.0;
-*
-* available axes:
-'wght' (range from 100.0 to 900.0
-*/
-@font-face {
-  font-family: 'Zodiak-VariableItalic';
-  src: url('../fonts/Zodiak-VariableItalic.woff2') format('woff2'),
-       url('../fonts/Zodiak-VariableItalic.woff') format('woff'),
-       url('../fonts/Zodiak-VariableItalic.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-
 :root {    
     /* font-families */
     --font-1   : "Switzer", sans-serif;
-    --font-2   :"Zodiak-Variable", Serif;
+    --font-2   :"Switzer", sans-serif;
     --font-3   : "Switzer", sans-serif;
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 
@@ -505,7 +475,7 @@
     --type-weight-body             : 400;
     --type-weight-body-sm          : 400;
     --type-weight-body-bold        : 600;
-    --type-weight-headings         : 400;
+    --type-weight-headings         : 500;
     --type-weight-headings-alt     : 500;
     --type-weight-all-caps         : 500;
     --type-weight-quote            : 400;
@@ -3094,7 +3064,7 @@ tr[data-href]:hover {
 
 .section-header .text-display-title {
     margin-top: 0;
-    font-size : clamp(var(--text-display), var(--text-display) - 1rem + 2vw, var(--text-huge));
+    font-size : clamp(var(--text-lg), var(--text-lg) - 1rem + 2vw, var(--text-huge));
 }
 
 .section-header::before {
@@ -3612,6 +3582,46 @@ tr[data-href]:hover {
     }
 }
 
+/* =========================================
+   Volvelle (Canvas Instrument)
+   ========================================= */
+
+.volvelle-figure {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+/* Square container that respects your grid */
+.volvelle-square {
+  position: relative;
+  width: 100%;
+  max-width: 720px;          /* matches your image scale */
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+/* Canvas fills the square, never overflows */
+.volvelle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  touch-action: none;        /* critical for rotation */
+  cursor: grab;
+}
+
+.volvelle-canvas:active {
+  cursor: grabbing;
+}
+
+/* Caption styling (subtle, editorial) */
+.volvelle-figure figcaption {
+  margin-top: 1rem;
+  font-size: 0.85em;
+  color: #666;
+}
 
 /* ===================================================================
  * # INTRO
@@ -3619,9 +3629,9 @@ tr[data-href]:hover {
  *
  * ------------------------------------------------------------------- */
 .s-intro {
-    --content-padding-top   : max(13.6rem, 24vh);
+    --content-padding-top   : max(10.6rem, 24vh);
     --content-padding-bottom: var(--vspace-2_5);
-    --content-min-height    : calc(var(--vspace-1) * 27);
+    --content-min-height    : calc(var(--vspace-1) * 20);
 
     z-index                 : 2;
     height                  : max(var(--content-min-height), 100vh);
@@ -3655,8 +3665,8 @@ tr[data-href]:hover {
 .intro-header__overline {
     font-family   : var(--type-headings);
     font-weight   : 400;
-    font-style    : italic;
-    font-size     : var(--text-lg);
+    font-style    : regular;
+    font-size     : var(--text-base);
     line-height   : 1;
     letter-spacing: -0.02em;
     color         : var(--color-text);
@@ -3678,7 +3688,7 @@ tr[data-href]:hover {
 }
 
 .intro-header__big-type {
-    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 18.4rem);
+    font-size  : clamp(var(--text-display), var(--text-3xl) + 10vw, 12.4rem);
     line-height: 1;
     margin-top : 0;
 }
@@ -5310,12 +5320,12 @@ text-align: left;
 }
 
 .folio-item__thumb:hover .folio-item__thumb-link::before {
-    opacity    : 1;
+    opacity    : 0;
     visibility : visible;
 }
 
 .folio-item__thumb:hover .folio-item__thumb-link::after {
-    opacity    : 1;
+    opacity    : 0;
     visibility : visible;
     transform  : scale(1);
 }

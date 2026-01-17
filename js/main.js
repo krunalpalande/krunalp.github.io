@@ -1,5 +1,5 @@
 /* ===================================================================
- * Lounge 1.0.0 - Main JS
+ * Main JS
  *
  *
  * ------------------------------------------------------------------- */
@@ -9,9 +9,6 @@
     'use strict';
 
     const cfg = {
-
-        // MailChimp URL
-        mailChimpURL : 'https://gmail.us8.list-manage.com/subscribe/post?u=0372f416821b8680ad7ce7df2&amp;id=d94694ee65&amp;f_id=001f16e1f0'
 
     };
 
@@ -696,6 +693,7 @@
         ssAlertBoxes();
         ssSmoothScroll();
 
+
     })();
 
 })(document.documentElement);
@@ -788,3 +786,228 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }; // end ssAnimateOnScroll
+
+ /* photoswipe
+    * ----------------------------------------------------- */
+    const ssPhotoswipe = function() {
+
+        const items = [];
+        const pswp = document.querySelectorAll('.pswp')[0];
+        const folioItems = document.querySelectorAll('.folio-item');
+
+        if (!(pswp && folioItems)) return;
+
+        folioItems.forEach(function(folioItem) {
+
+            let folio = folioItem;
+            let thumbLink = folio.querySelector('.folio-item__thumb-link');
+            let title = folio.querySelector('.folio-item__title');
+            let caption = folio.querySelector('.folio-item__caption');
+            let titleText = '<h4>' + title.innerHTML + '</h4>';
+            let captionText = caption.innerHTML;
+            let href = thumbLink.getAttribute('href');
+            let size = thumbLink.dataset.size.split('x'); 
+            let width  = size[0];
+            let height = size[1];
+
+            let item = {
+                src  : href,
+                w    : width,
+                h    : height
+            }
+
+            if (caption) {
+                item.title = titleText.trim() + captionText.trim();
+            }
+
+            items.push(item);
+
+        });
+
+        // bind click event
+        folioItems.forEach(function(folioItem, i) {
+
+            let thumbLink = folioItem.querySelector('.folio-item__thumb-link');
+
+            thumbLink.addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                let options = {
+                    index: i,
+                    showHideOpacity: true
+                }
+
+                // initialize PhotoSwipe
+                let lightBox = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
+                lightBox.init();
+            });
+
+        });
+
+    };  // end ssPhotoSwipe
+
+/* =========================================
+   Volvelle
+   ========================================= */
+
+(function () {
+
+  const DPR = window.devicePixelRatio || 1;
+
+  document.querySelectorAll(".volvelle-canvas").forEach(initVolvelle);
+
+  function initVolvelle(canvas) {
+
+    const ctx = canvas.getContext("2d");
+    const type = canvas.dataset.volvelle || "lunar";
+
+    /* ---------- image paths ---------- */
+
+    let IMAGE_PATH, layers;
+
+    if (type === "lunar") {
+      IMAGE_PATH = "images/lunarvolvelle/";
+      layers = [
+        { name: "base",     src: IMAGE_PATH + "base.png",          angle: 0 },
+        { name: "calendar", src: IMAGE_PATH + "calendar-ring.png", angle: 0 },
+        { name: "sun",      src: IMAGE_PATH + "sun.png",           angle: 0 },
+        { name: "moon",     src: IMAGE_PATH + "moon.png",          angle: 70 }
+      ];
+    }
+
+    if (type === "nasa-moon-phase") {
+      IMAGE_PATH = "images/nasa-volvelle/";
+      layers = [
+        { name: "base",  src: IMAGE_PATH + "base.png",  angle: 0 },
+        { name: "earth", src: IMAGE_PATH + "earth.png", angle: 0 },
+        { name: "moon",  src: IMAGE_PATH + "moon.png",  angle: 0, fixed: true }
+      ];
+    }
+
+    if (!layers) return;
+
+    let activeLayer = null;
+    let lastPointerAngle = 0;
+
+    /* ---------- Load images ---------- */
+
+    Promise.all(
+      layers.map(layer => {
+        return new Promise(resolve => {
+          const img = new Image();
+          img.onload = () => {
+            layer.img = img;
+            resolve();
+          };
+          img.src = layer.src;
+        });
+      })
+    ).then(() => {
+      resize();
+      window.addEventListener("resize", resize);
+    });
+
+    /* ---------- Resize ---------- */
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width  = rect.width  * DPR;
+      canvas.height = rect.height * DPR;
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      draw();
+    }
+
+    /* ---------- Draw ---------- */
+
+    function draw() {
+      const size = canvas.width / DPR;
+      const center = size / 2;
+
+      ctx.clearRect(0, 0, size, size);
+
+      layers.forEach(layer => {
+        ctx.save();
+        ctx.translate(center, center);
+        ctx.rotate(layer.angle);
+        ctx.drawImage(layer.img, -center, -center, size, size);
+        ctx.restore();
+      });
+    }
+
+    /* ---------- Geometry ---------- */
+
+    function pointerAngle(x, y, c) {
+      return Math.atan2(y - c, x - c);
+    }
+
+    function distance(x, y, c) {
+      return Math.hypot(x - c, y - c);
+    }
+
+    /* ---------- Hit testing ---------- */
+
+    function pickLayer(x, y, c) {
+      const r = distance(x, y, c);
+
+      if (type === "lunar") {
+        if (r > c * 0.65 && r < c * 0.95) return layers[1]; // calendar
+        if (r > c * 0.30 && r < c * 0.60) return layers[2]; // moon
+        if (r < c * 0.55)                 return layers[3]; // sun
+      }
+
+      if (type === "nasa-moon-phase") {
+        const step = c / layers.length;
+        const index = Math.min(
+          layers.length - 1,
+          Math.floor(r / step)
+        );
+        return layers[layers.length - 1 - index];
+      }
+
+      return null;
+    }
+
+    /* ---------- Interaction ---------- */
+
+    canvas.addEventListener("pointerdown", e => {
+      const rect = canvas.getBoundingClientRect();
+      const c = rect.width / 2;
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      activeLayer = pickLayer(x, y, c);
+      if (!activeLayer) return;
+
+      lastPointerAngle = pointerAngle(x, y, c);
+      canvas.setPointerCapture(e.pointerId);
+    });
+
+    canvas.addEventListener("pointermove", e => {
+      if (!activeLayer) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const c = rect.width / 2;
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const a = pointerAngle(x, y, c);
+      activeLayer.angle += a - lastPointerAngle;
+      lastPointerAngle = a;
+
+      draw();
+    });
+
+    function release() {
+      activeLayer = null;
+    }
+
+    canvas.addEventListener("pointerup", release);
+    canvas.addEventListener("pointerleave", release);
+    canvas.addEventListener("pointercancel", release);
+  }
+
+})();
+
