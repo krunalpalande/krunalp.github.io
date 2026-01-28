@@ -97,13 +97,22 @@
 /* Switzer Variable Font - Normal */
 @font-face {
   font-family: 'Switzer';
-  src: url('fonts/Switzer-Variable.woff2') format('woff2'),
+  src:url('fonts/Switzer-Variable.woff2') format('woff2'),
        url('fonts/Switzer-Variable.woff') format('woff'),
        url('fonts/Switzer-Variable.ttf') format('truetype');
   font-weight: 100 900; /* full variable range */
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/AzeretMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* full variable range */
+  font-display: swap;
+  font-style: normal;
+}
+
 
 /* Switzer Variable Font - Italic */
 @font-face {
@@ -119,9 +128,9 @@
 :root {    
     /* font-families */
     --font-1   : "Switzer", sans-serif;
-    --font-2   :"Switzer", sans-serif;
+    --font-2   : "Switzer", sans-serif;
     --font-3   : "Switzer", sans-serif;
-    --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+    --font-mono: "Azeret Mono", monospace;
 
 
 }
@@ -401,7 +410,7 @@
    * --text-xl        = (34.56px)
    * --text-lg        = (28.80px)
    * --text-md        = (24.00px)
-   * --text-base      = (20.00px) BASE
+   * --text-base      = (24.00px) BASE
    * --text-sm        = (16.67px)
    * --text-xs        = (13.89px)
    *
@@ -473,16 +482,16 @@
   /* type weights
    */
     --type-weight-body             : 400;
-    --type-weight-body-sm          : 400;
-    --type-weight-body-bold        : 600;
+    --type-weight-body-sm          : 500;
+    --type-weight-body-bold        : 800;
     --type-weight-headings         : 500;
     --type-weight-headings-alt     : 500;
-    --type-weight-all-caps         : 500;
-    --type-weight-quote            : 400;
+    --type-weight-all-caps         : 600;
+    --type-weight-quote            : 500;
     --type-weight-lead             : 300;
     --type-weight-caption          : 400;
     --type-weight-drop-cap         : 600;
-    --type-weight-code             : 400;
+    --type-weight-code             : 500;
 
   /* letter spacing
    */
@@ -1638,6 +1647,7 @@ h6,
     line-height   : var(--type-line-height-all-caps);
     text-transform: uppercase;
     letter-spacing: var(--type-spacing-all-caps);
+    color      : var(--color-1-600);
 }
 
 /* emphasis, italic,
@@ -3360,7 +3370,7 @@ tr[data-href]:hover {
 .header-nav__links a {
     display            : block;
     font-family        : var(--type-body);
-    font-weight        : 500;
+    font-weight        : 600;
     color              : var(--color-text-light);
     padding            : 0 var(--vspace-0_375);
     transition-property: color, background-color;
@@ -3373,7 +3383,7 @@ tr[data-href]:hover {
 }
 
 .header-nav__links .current a {
-    color: var(--color-neutral-600);
+    color: var(--color-1-600);
 }
 
 /* header contact num
@@ -3664,7 +3674,7 @@ tr[data-href]:hover {
 
 .intro-header__overline {
     font-family   : var(--type-headings);
-    font-weight   : 400;
+    font-weight   : 500;
     font-style    : regular;
     font-size     : var(--text-base);
     line-height   : 1;
@@ -4703,7 +4713,7 @@ tr[data-href]:hover {
 }
 
 .s-footer a {
-    color: var(--color-white);
+    color: var(--color-text-light);
 }
 
 .s-footer a:focus,
@@ -5328,5 +5338,79 @@ text-align: left;
     opacity    : 0;
     visibility : visible;
     transform  : scale(1);
+}
+
+/* ============================================================
+   Colour Context Charts (Fixed CSS)
+   ============================================================ */
+
+/* ---------- Shared wrapper ---------- */
+.colour-chart {
+  width: 100%;
+  max-width: 100%;
+  margin: var(--vspace-2) auto;
+}
+
+/* ---------- Colour Scale ---------- */
+.grey-scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--vspace-0_25);
+width: min(90vw, 420px);
+margin-inline: auto;
+}
+
+.grey-scale__swatch {
+  aspect-ratio: 1 / 1;
+  background: var(--swatch-color);
+}
+
+/* ---------- Colour Scale ---------- */
+
+.colour-scale {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--vspace-0_25);
+width: min(90vw, 360px);
+margin-inline: auto;
+}
+
+.colour-scale__swatch {
+  aspect-ratio: 1 / 1;
+  background: var(--swatch-color);
+}
+
+/* ---------- Simultaneous Contrast ---------- */
+.simultaneous-contrast {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--vspace-1);
+width: min(90vw, 360px);
+margin-inline: auto;
+}
+
+.simultaneous-contrast__cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surround-color);
+}
+
+.simultaneous-contrast__inner {
+  width: 45%;
+  height: 45%;
+  background: var(--inner-color);
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 600px) {
+  .colour-scale {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .simultaneous-contrast {
+    grid-template-columns: 1fr;
+  }
 }
 
