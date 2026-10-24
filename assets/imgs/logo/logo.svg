@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 336 336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1802.5,-686.761)">
+        <g transform="matrix(0.181269,0,0,0.181269,1556.54,559.438)">
+            <g transform="matrix(0.298082,0,0,0.298082,1631.12,1142.55)">
+                <path d="M1359.38,1577.4L1359.38,702.397L1545.63,702.397L1911.88,1321.15L1911.88,702.397L2079.38,702.397L2079.38,1577.4L1893.13,1577.4L1526.88,958.647L1526.88,1577.4L1359.38,1577.4Z" style="fill:rgb(54,107,91);fill-rule:nonzero;"/>
+                <path d="M2271.88,1442.4L2271.88,837.397L2406.88,702.397L2861.88,702.397L2996.88,837.397L2996.88,1442.4L2861.88,1577.4L2406.88,1577.4L2271.88,1442.4ZM2454.38,857.397L2454.38,1422.4L2814.38,1422.4L2814.38,857.397L2454.38,857.397Z" style="fill:rgb(54,107,91);fill-rule:nonzero;"/>
+                <path d="M1356.88,2418.12L1356.88,1813.12L1491.88,1678.12L1946.88,1678.12L2081.88,1813.12L2081.88,2418.12L1946.88,2553.12L1491.88,2553.12L1356.88,2418.12ZM1539.38,1833.12L1539.38,2398.12L1899.38,2398.12L1899.38,1833.12L1539.38,1833.12Z" style="fill:rgb(54,107,91);fill-rule:nonzero;"/>
+                <path d="M2274.38,2553.12L2274.38,1678.12L2451.88,1678.12L2451.88,2031.87L2603.13,2031.87L2794.38,1678.12L2993.13,1678.12L2760.63,2090.62L3011.88,2553.12L2813.13,2553.12L2616.88,2186.87L2451.88,2186.87L2451.88,2553.12L2274.38,2553.12Z" style="fill:rgb(54,107,91);fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(0.181269,0,0,0.181269,1556.54,559.438)">
+            <g transform="matrix(5.51666,0,0,5.51666,-8586.91,-3086.23)">
+                <rect x="1802.5" y="686.761" width="335.479" height="335.479" style="fill:none;"/>
+            </g>
+        </g>
+    </g>
+</svg>
